@@ -22,6 +22,7 @@ class AssignPersonToGroupCommandTest {
         model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
     }
 
+    
     @Test
     void execute_assign_success() {
         Person validPerson = model.getPerson(new Name("Alice Pauline"));
