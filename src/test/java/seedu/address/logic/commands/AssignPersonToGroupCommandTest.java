@@ -15,12 +15,7 @@ import seedu.address.model.person.Person;
 
 class AssignPersonToGroupCommandTest {
 
-    private Model model;
-
-    @BeforeEach
-    public void setUp() {
-        model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
-    }
+    private Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
 
     @Test
     void execute_assign_success() {
