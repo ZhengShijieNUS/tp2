@@ -31,6 +31,7 @@ class AssignPersonToGroupCommandTest {
 
         Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
         expectedModel.addGroup(validGroup);
+        expectedModel.getPerson(new Name("Alice Pauline")).setGroup(validGroup);
 
         assertCommandSuccess(new AssignPersonToGroupCommand(validGroup, validPerson.getName()), model,
                 String.format(
